@@ -740,46 +740,9 @@ if __name__ == "__main__":
     # generating images, etc.
 
     cat = load_color_image("test_images/cat.png")
-    # color_inverted = color_filter_from_greyscale_filter(inverted)
-    # inverted_cat = color_inverted(cat)
-    # save_color_image(inverted_cat, "inverted_cat.png")
-
-    # blur_filter = color_filter_from_greyscale_filter(make_blur_filter(9))
-    # blurred_python = blur_filter(load_color_image('test_images/python.png'))
-    # save_color_image(blurred_python, "blurred_python.png")
-
-    # sharpen_filter = color_filter_from_greyscale_filter(make_sharpen_filter(7))
-    # sparrowchick = load_color_image('test_images/sparrowchick.png')
-    # sharpened_sparrowchick = sharpen_filter(sparrowchick)
-    # save_color_image(sharpened_sparrowchick, "sharpened_sparrowchick.png")
-
-    # filter1 = color_filter_from_greyscale_filter(edges)
-    # filter2 = color_filter_from_greyscale_filter(make_blur_filter(5))
-    # filt = filter_cascade([filter1, filter1, filter2, filter1])
-    # filtered_frog = filt(load_color_image('test_images/frog.png'))
-    # save_color_image(filtered_frog, 'filtered_frog.png')
-
-    # two_cats = load_color_image('test_images/twocats.png')
-    # seam_carved_two_cats = seam_carving(two_cats, 100)
-    # save_color_image(seam_carved_two_cats, 'seam_carved_two_cats.png')
-
-    # color_edges = color_filter_from_greyscale_filter(edges)
-    # cat_edges = color_edges(cat)
-    # save_color_image(cat_edges, 'edges_cat.png')
-
-    # color_median = color_filter_from_greyscale_filter(median_filter)
-    # cat_edges_median = filter_cascade([color_edges, color_median])(cat)
-    # save_color_image(cat_edges_median, 'med_edges_cat.png')
-
     no_background_cat = custom_feature(cat)
     save_color_image(no_background_cat, "no_background_cat.png")
 
     space = load_color_image("test_images/space.png")
     cat_in_space = custom_feature(cat, space)
     save_color_image(cat_in_space, "cat_in_space.png")
-
-    # careen = load_color_image("test_images/careen.png")
-    # beach = load_color_image('test_images/beach.png')
-    # save_color_image(custom_feature(careen, beach), "careen_on_beach.png", "PNG")
-
-    pass
